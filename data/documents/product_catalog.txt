@@ -1,0 +1,71 @@
+# Product Catalog 2026
+
+## Smartphones
+
+### Model X Pro
+- Price: $999
+- Display: 6.7" OLED, 120Hz
+- Camera: 108MP main, 12MP ultrawide, 10MP telephoto
+- Battery: 5000mAh with 65W fast charging
+- Storage: 256GB / 512GB options
+- Colors: Midnight Black, Ocean Blue, Rose Gold
+
+### Model X Lite
+- Price: $599
+- Display: 6.4" AMOLED, 90Hz
+- Camera: 64MP main, 8MP ultrawide
+- Battery: 4500mAh with 33W fast charging
+- Storage: 128GB / 256GB options
+- Colors: White, Black, Green
+
+## Laptops
+
+### ProBook 15
+- Price: $1,299
+- Processor: Intel Core i7-13th Gen
+- RAM: 16GB DDR5
+- Storage: 512GB NVMe SSD
+- Display: 15.6" Full HD IPS
+- Battery Life: Up to 10 hours
+- Weight: 1.8 kg
+
+### ProBook Air
+- Price: $999
+- Processor: Intel Core i5-13th Gen
+- RAM: 8GB DDR5
+- Storage: 256GB NVMe SSD
+- Display: 14" Full HD IPS
+- Battery Life: Up to 12 hours
+- Weight: 1.2 kg
+
+## Accessories
+
+### Wireless Earbuds Pro
+- Price: $199
+- Active Noise Cancellation
+- Battery: 8 hours (30 hours with case)
+- Water resistant: IPX4
+
+### Smart Watch Series 5
+- Price: $349
+- Display: 1.9" AMOLED Always-On
+- Health features: Heart rate, SpO2, ECG
+- Battery: Up to 3 days
+- Water resistant: 50 meters
+
+### Portable Charger 20000mAh
+- Price: $49
+- Capacity: 20000mAh
+- Outputs: 2x USB-A, 1x USB-C
+- Fast charging: 22.5W
+
+## Warranty Information
+- All products include 1-year standard warranty
+- Extended warranty available (2 years: $99, 3 years: $149)
+- Free repairs for manufacturing defects
+- 30-day return policy for unopened items
+
+## Customer Support
+- Phone: 1-800-PRODUCTS
+- Email: support@products.com
+- Live Chat: Available 24/7 on our website

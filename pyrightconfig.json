@@ -1,0 +1,12 @@
+{
+    "include": ["src", "app.py", "app_demo.py", "app_free.py", "tests"],
+    "exclude": ["venv", ".venv", "__pycache__"],
+    "reportMissingTypeStubs": false,
+    "reportUnknownMemberType": false,
+    "reportUnknownArgumentType": false,
+    "reportUnknownVariableType": false,
+    "reportUnknownParameterType": false,
+    "reportGeneralTypeIssues": "warning",
+    "pythonVersion": "3.9",
+    "typeCheckingMode": "basic"
+}

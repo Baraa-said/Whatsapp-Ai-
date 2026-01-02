@@ -1,0 +1,47 @@
+# TechCorp Company Policies
+
+## Working Hours
+- Standard working hours are 9:00 AM to 5:00 PM, Monday through Friday
+- Flexible working arrangements are available upon manager approval
+- Remote work is permitted up to 3 days per week
+
+## Leave Policy
+
+### Annual Leave
+- All employees are entitled to 20 days of paid annual leave per year
+- Leave requests must be submitted at least 2 weeks in advance
+- Unused leave can be carried over (maximum 5 days)
+
+### Sick Leave
+- Employees are entitled to 10 days of paid sick leave per year
+- A medical certificate is required for absences exceeding 3 consecutive days
+
+### Parental Leave
+- Maternity leave: 16 weeks paid leave
+- Paternity leave: 4 weeks paid leave
+- Adoption leave: 12 weeks paid leave
+
+## Expense Reimbursement
+- Business travel expenses are fully reimbursed
+- Receipts must be submitted within 30 days
+- Meals during travel: up to $50 per day
+- Hotel accommodations: up to $200 per night
+
+## IT Security Guidelines
+1. Passwords must be at least 12 characters long
+2. Two-factor authentication is mandatory
+3. Company devices must not be used for personal activities
+4. Report any suspicious emails to security@techcorp.com
+
+## Code of Conduct
+- Treat all colleagues with respect
+- Maintain confidentiality of company information
+- No discrimination or harassment of any kind
+- Conflicts of interest must be disclosed immediately
+
+## Contact Information
+- HR Department: hr@techcorp.com
+- IT Support: support@techcorp.com
+- Emergency: +1-800-TECHCORP
+
+Last Updated: January 2026

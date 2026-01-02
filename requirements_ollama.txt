@@ -1,0 +1,22 @@
+# WhatsApp AI RAG Chatbot - Dependencies (Ollama Version)
+# Core LLM & Embeddings (Local)
+langchain>=0.1.0
+langchain-community>=0.0.10
+sentence-transformers>=2.2.0
+
+# Vector Database
+faiss-cpu>=1.7.4
+
+# Document Processing
+pypdf>=3.17.0
+python-docx>=1.1.0
+
+# Web Interface
+streamlit>=1.29.0
+
+# Utilities
+python-dotenv>=1.0.0
+numpy>=1.24.0
+
+# For Ollama
+ollama>=0.1.0
