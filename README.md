@@ -123,15 +123,44 @@ cp .env.example .env
 
 ### Running the Application
 
+**Option 1: Using Groq (FREE - Recommended)**
 ```bash
+# Activate virtual environment first
+source .venv/bin/activate
+
+# Run the Groq version (free, uses Llama 3)
+streamlit run app_groq.py
+```
+
+**Option 2: Using OpenAI**
+```bash
+source .venv/bin/activate
 streamlit run app.py
+```
+
+**Alternative (without activating venv):**
+```bash
+.venv/bin/streamlit run app_groq.py
 ```
 
 The application will open in your browser at `http://localhost:8501`
 
+### Running WhatsApp Integration
+
+```bash
+# Terminal 1: Run the webhook server
+source .venv/bin/activate
+python whatsapp_webhook.py
+
+# Terminal 2: Run ngrok to expose the webhook
+ngrok http 5001
+```
+
+Then configure the ngrok URL in Twilio WhatsApp Sandbox.
+
 ### Using the Chatbot
 
-1. **Enter API Key**: Input your OpenAI API key in the sidebar
+1. **Enter API Key**: Input your Groq API key in the sidebar (get free at https://console.groq.com/keys)
 2. **Upload Documents**: Use the file uploader to add your documents
 3. **Process Documents**: Click "Process Documents" to create the knowledge base
 4. **Start Chatting**: Type your questions in the chat input
