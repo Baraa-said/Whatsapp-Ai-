@@ -5,10 +5,9 @@ Implements the Retrieval-Augmented Generation chain using LangChain
 
 from typing import List, Optional, Dict, Any, Union
 from pydantic import SecretStr
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
-from langchain.schema.messages import HumanMessage, SystemMessage
-from langchain.memory import ConversationBufferWindowMemory
+from langchain_core.messages import HumanMessage, SystemMessage
 
 from src.config import Config, SYSTEM_PROMPT
 from src.vector_store import VectorStore
@@ -40,14 +39,6 @@ class RAGChain:
         
         # Conversation history (content can be str or list from LLM)
         self.conversation_history: List[Dict[str, Any]] = []
-        
-        # Memory for conversation
-        self.memory = ConversationBufferWindowMemory(
-            memory_key="chat_history",
-            return_messages=True,
-            output_key="answer",
-            k=5  # Keep last 5 exchanges
-        )
     
     def _format_context(self, documents: List[Document]) -> str:
         """Format retrieved documents into context string"""
@@ -169,7 +160,6 @@ class RAGChain:
     def clear_history(self):
         """Clear conversation history"""
         self.conversation_history = []
-        self.memory.clear()
         print("🗑️ Conversation history cleared")
     
     def get_history(self) -> List[Dict[str, str]]:

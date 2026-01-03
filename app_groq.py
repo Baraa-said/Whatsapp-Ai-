@@ -55,7 +55,7 @@ st.markdown("""
 
 # ============ RAG Components with Groq ============
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -147,7 +147,8 @@ def initialize_session_state() -> None:
     if "docs_loaded" not in st.session_state:
         st.session_state.docs_loaded = False
     if "groq_api_key" not in st.session_state:
-        st.session_state.groq_api_key = ""
+        # Check for environment variable first
+        st.session_state.groq_api_key = os.getenv("GROQ_API_KEY", "")
 
 
 def render_chat_header() -> None:

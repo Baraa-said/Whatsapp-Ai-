@@ -6,7 +6,7 @@ Handles FAISS vector database operations for document embeddings
 import os
 from typing import List, Optional, Tuple
 from pydantic import SecretStr
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 

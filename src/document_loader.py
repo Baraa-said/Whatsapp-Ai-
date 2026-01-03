@@ -5,14 +5,14 @@ Handles loading and processing of various document types (PDF, TXT, DOCX, MD)
 
 import os
 from typing import List
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_community.document_loaders import (
     PyPDFLoader,
     TextLoader,
     Docx2txtLoader,
     UnstructuredMarkdownLoader
 )
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from src.config import Config
 
