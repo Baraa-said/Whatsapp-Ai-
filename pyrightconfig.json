@@ -1,6 +1,20 @@
 {
-    "include": ["src", "app.py", "app_demo.py", "app_free.py", "tests"],
-    "exclude": ["venv", ".venv", "__pycache__"],
+    "include": [
+        "src",
+        "app.py",
+        "app_demo.py",
+        "app_free.py",
+        "app_groq.py",
+        "tests"
+    ],
+    "exclude": [
+        "venv",
+        ".venv",
+        "__pycache__",
+        "*.pyc",
+        "data",
+        ".git"
+    ],
     "reportMissingTypeStubs": false,
     "reportUnknownMemberType": false,
     "reportUnknownArgumentType": false,
@@ -8,5 +22,7 @@
     "reportUnknownParameterType": false,
     "reportGeneralTypeIssues": "warning",
     "pythonVersion": "3.9",
-    "typeCheckingMode": "basic"
+    "typeCheckingMode": "basic",
+    "useLibraryCodeForTypes": true,
+    "enableTypeIgnoreComments": true
 }

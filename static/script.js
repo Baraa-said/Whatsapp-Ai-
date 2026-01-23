@@ -77,15 +77,6 @@ function addMessage(text, type, sources = null) {
     let formattedText = text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
     formattedText = formattedText.replace(/\n/g, '<br>');
 
-    // Add sources if available
-    if (sources && sources.length > 0) {
-        formattedText += '<br><div class="source-citation"><b>Sources:</b><br>';
-        sources.forEach((source, index) => {
-            formattedText += `<small>${index + 1}. ${source.source}</small><br>`;
-        });
-        formattedText += '</div>';
-    }
-
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const tick = type === 'sent' ? '<span class="message-tick"><i class="material-icons" style="font-size: 16px;">done_all</i></span>' : '';
 
