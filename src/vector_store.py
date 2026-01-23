@@ -5,11 +5,9 @@ Handles FAISS vector database operations for document embeddings
 
 import os
 from typing import List, Optional, Tuple
-from pydantic import SecretStr
 from langchain_core.documents import Document
-from langchain_openai import OpenAIEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-
 from src.config import Config
 
 
@@ -17,12 +15,12 @@ class VectorStore:
     """Manages FAISS vector store for document embeddings"""
     
     def __init__(self):
-        """Initialize the vector store with OpenAI embeddings"""
-        Config.validate()
-        
-        self.embeddings = OpenAIEmbeddings(
-            model=Config.EMBEDDING_MODEL,
-            api_key=SecretStr(Config.OPENAI_API_KEY)
+        """Initialize the vector store with local HuggingFace embeddings (no API needed)"""
+        # Use local embeddings - no API key required!
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name="all-MiniLM-L6-v2",
+            model_kwargs={'device': 'cpu'},
+            encode_kwargs={'normalize_embeddings': True}
         )
         self.vector_store: Optional[FAISS] = None
         self.store_path = Config.VECTOR_STORE_PATH

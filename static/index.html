@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Simulation</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="header">
+                <div class="user-avatar">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="User Avatar">
+                </div>
+                <div class="header-icons">
+                    <i class="material-icons" title="Upload Documents"
+                        onclick="document.getElementById('file-upload').click()">attach_file</i>
+                    <input type="file" id="file-upload" multiple style="display: none"
+                        onchange="uploadFiles(this.files)">
+                    <i class="material-icons">chat</i>
+                    <i class="material-icons">more_vert</i>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <div class="search-box">
+                    <i class="material-icons">search</i>
+                    <input type="text" placeholder="Search or start new chat">
+                </div>
+            </div>
+
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <div class="chat-avatar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Assistant">
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header-row">
+                            <span class="chat-name">AI Assistant</span>
+                            <span class="chat-time">Now</span>
+                        </div>
+                        <div class="chat-last-message">
+                            <span class="tick"><i class="material-icons">done_all</i></span>
+                            Ask me anything about TechHaven!
+                        </div>
+                    </div>
+                </div>
+                <!-- Placeholder chats -->
+                <div class="chat-item">
+                    <div class="chat-avatar">
+                        <div class="avatar-placeholder">TE</div>
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header-row">
+                            <span class="chat-name">Test Group</span>
+                            <span class="chat-time">Yesterday</span>
+                        </div>
+                        <div class="chat-last-message">
+                            Hello everyone!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-area">
+            <div class="header">
+                <div class="chat-avatar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Assistant">
+                </div>
+                <div class="chat-info">
+                    <span class="chat-name">AI Assistant</span>
+                    <span class="chat-status">online</span>
+                </div>
+                <div class="header-icons">
+                    <i class="material-icons">search</i>
+                    <i class="material-icons" onclick="clearChat()" title="Clear Chat">delete_outline</i>
+                    <i class="material-icons">more_vert</i>
+                </div>
+            </div>
+
+            <div class="messages-container" id="messages-container">
+                <div class="encryption-message">
+                    <i class="material-icons">lock</i>
+                    All documents are processed locally. Your data is secure.
+                </div>
+
+                <div class="message received">
+                    <div class="message-content">
+                        👋 Welcome to TechHaven! I'm your AI assistant. Ask me about our phones, prices, services, or
+                        policies!
+                        <span class="message-time">12:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <i class="material-icons">sentiment_satisfied_alt</i>
+                <i class="material-icons">attach_file</i>
+                <input type="text" id="message-input" placeholder="Type a message">
+                <i class="material-icons" id="mic-icon" style="display: block;">mic</i>
+                <i class="material-icons" id="send-icon" style="display: none;">send</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Documents uploaded successfully!</div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

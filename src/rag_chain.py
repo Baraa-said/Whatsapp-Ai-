@@ -3,10 +3,10 @@ RAG Chain Module
 Implements the Retrieval-Augmented Generation chain using LangChain
 """
 
+import os
 from typing import List, Optional, Dict, Any, Union
-from pydantic import SecretStr
 from langchain_core.documents import Document
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from src.config import Config, SYSTEM_PROMPT
@@ -26,15 +26,13 @@ class RAGChain:
         Args:
             vector_store: Initialized VectorStore instance
         """
-        Config.validate()
-        
         self.vector_store = vector_store
         
-        # Initialize the LLM
-        self.llm = ChatOpenAI(
-            model=Config.OPENAI_MODEL,
+        # Initialize the LLM with Groq (fast and free tier available)
+        self.llm = ChatGroq(
+            model="llama-3.1-8b-instant",
             temperature=Config.TEMPERATURE,
-            api_key=SecretStr(Config.OPENAI_API_KEY)
+            api_key=os.getenv("GROQ_API_KEY")
         )
         
         # Conversation history (content can be str or list from LLM)

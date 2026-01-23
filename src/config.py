@@ -12,13 +12,13 @@ load_dotenv()
 class Config:
     """Configuration class for the RAG chatbot application"""
     
-    # OpenAI Settings
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-    OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
-    EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-ada-002")
+    # Google Gemini Settings
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-pro")
+    EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "models/embedding-001")
     
     # Vector Store Settings
-    VECTOR_STORE_PATH = os.getenv("VECTOR_STORE_PATH", "./data/vector_store")
+    VECTOR_STORE_PATH = os.getenv("VECTOR_STORE_PATH", "./data/vector_store_gemini")
     
     # Document Processing Settings
     CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", 1000))
@@ -35,8 +35,8 @@ class Config:
     @classmethod
     def validate(cls):
         """Validate required configuration"""
-        if not cls.OPENAI_API_KEY:
-            raise ValueError("OPENAI_API_KEY is required. Please set it in .env file")
+        if not cls.GOOGLE_API_KEY:
+            raise ValueError("GOOGLE_API_KEY is required. Please set it in .env file")
         return True
 
 # System prompt for the chatbot

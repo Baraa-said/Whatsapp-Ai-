@@ -79,7 +79,10 @@ class TestVectorStore:
     def test_similarity_search_without_store(self):
         """Test that similarity search fails without initialized store"""
         with patch('src.vector_store.Config') as mock_config:
+            # Set attributes as actual strings, not Mocks
             mock_config.OPENAI_API_KEY = "test-key"
+            mock_config.EMBEDDING_MODEL = "text-embedding-ada-002"
+            mock_config.VECTOR_STORE_PATH = "./test_store"
             mock_config.validate.return_value = True
             
             from src.vector_store import VectorStore

@@ -3,6 +3,7 @@
 openai>=1.0.0
 langchain>=0.1.0
 langchain-openai>=0.0.5
+langchain-google-genai>=0.0.3
 langchain-community>=0.0.10
 
 # Vector Database
@@ -12,6 +13,8 @@ faiss-cpu>=1.7.4
 pypdf>=3.17.0
 python-docx>=1.1.0
 tiktoken>=0.5.0
+unstructured>=0.10.0
+markdown>=3.4.0
 
 # Web Interface
 streamlit>=1.29.0
@@ -20,5 +23,13 @@ streamlit>=1.29.0
 python-dotenv>=1.0.0
 numpy>=1.24.0
 
-# Optional: For WhatsApp Integration (future)
+# Optional: For WhatsApp Integration (Twilio)
 # twilio>=8.10.0
+
+# Required for Meta Cloud API
+requests>=2.31.0
+
+# Web Application
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.9
